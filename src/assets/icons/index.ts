@@ -1,0 +1,9 @@
+export { default as LogoIcon } from "./logo.svg";
+export { default as CommunityIcon } from "./community.svg";
+export { default as CurriculumIcon } from "./curriculum.svg";
+export { default as InstructorIcon } from "./instructor.svg";
+export { default as LearningIcon } from "./learning.svg";
+export { default as SupportIcon } from "./support.svg";
+export { default as AccessibilityIcon } from "./accessibility.svg";
+export { default as ArrowLeftIcon } from "./arrow-left.svg";
+export { default as ArrowRightIcon } from "./arrow-right.svg";
