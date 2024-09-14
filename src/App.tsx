@@ -5,7 +5,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import { Layout } from "./components";
+import { Layout, NotFound } from "./components";
 import { AboutPage, HomePage, BootCampPage } from "./pages";
 
 
@@ -17,6 +17,7 @@ const router = createBrowserRouter(
         <Route path="about" element={<AboutPage />} />
         <Route path="bootcamps" element={<BootCampPage />} />
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );
