@@ -62,7 +62,13 @@ export const Navbar: FC = () => {
             className={`hidden lg:flex items-center text-base font-normal text-white gap-12`}
           >
             {renderNavLinks}
-            <Button buttonName={"Join TrybebyFUSE"} />
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdO9m8qEs0v-Ty6JZaTdBzGoyozpxgMWlEzR5XFXJwHnlnNcg/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button buttonName="Join TrybebyFUSE" />
+            </a>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -80,9 +86,14 @@ export const Navbar: FC = () => {
                 className={`lg:hidden flex flex-col items-center gap-12 text-2xl font-normal text-white mt-24 mb-4 px-4 md:px-20`}
               >
                 {renderNavLinks}
-                <Link to="." className="w-full">
-                  <Button buttonName={"Join TrybebyFUSE"} />
-                </Link>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdO9m8qEs0v-Ty6JZaTdBzGoyozpxgMWlEzR5XFXJwHnlnNcg/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button buttonName="Join TrybebyFUSE" onPress={toggleMenu} />
+                </a>
               </nav>
             </div>
           )}
