@@ -1,34 +1,26 @@
-import { FC, useRef, useState } from "react";
+import { FC, useCallback, useState } from "react";
 import { ReviewCard } from "./ReviewCard";
 import { reviews } from "../../../data";
 import { TbChevronLeft, TbChevronRight } from "react-icons/tb";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, EffectCoverflow, Navigation } from "swiper/modules";
+import { Swiper as SwiperType } from "swiper";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export const ReviewsSection: FC = () => {
+  const [swiperRef, setSwiperRef] = useState<SwiperType | null>(null);
 
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 3; // Adjust based on visible items
-  const totalPages = Math.ceil(reviews.length / itemsPerPage);
+  const handlePrev = useCallback(() => {
+    if (swiperRef) swiperRef.slidePrev();
+  }, [swiperRef]);
 
-  const handleNextPage = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({
-        left: scrollContainerRef.current.offsetWidth,
-        behavior: "smooth",
-      });
-      setCurrentPage((prev) => Math.min(prev + 1, totalPages));
-    }
-  };
+  const handleNext = useCallback(() => {
+    if (swiperRef) swiperRef.slideNext();
+  }, [swiperRef]);
 
-  const handlePrevPage = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({
-        left: -scrollContainerRef.current.offsetWidth,
-        behavior: "smooth",
-      });
-      setCurrentPage((prev) => Math.max(prev - 1, 1));
-    }
-  };
   return (
     <section className={`bg-pry1 relative font-dmSan py-10 lg:py-20`}>
       <div className="flex flex-col gap-2 font-dmSans text-center px-6 md:px-16">
@@ -36,37 +28,54 @@ export const ReviewsSection: FC = () => {
         <p className="text-base font-normal text-grey11">
           Read what our past students are saying about their FUSE experience
         </p>
-        {/* <div className="flex flex-col gap-8 lg:hidden">
-          {reviews.map((item) => (
-            <ReviewCard key={item.id} item={item} />
-          ))}
-        </div> */}
       </div>
-      {/* <div className="hidden lg:flex overflow-scroll mt-10">
-        {reviews.map((item) => (
-          <ReviewCard key={item.id} item={item} />
-        ))}
-      </div> */}
-
-      <div
-        className="px-6 md:px-16 lg:px-0 mt-10 flex flex-col gap-8 lg:flex-row lg:overflow-x-auto"
-        ref={scrollContainerRef}
-      >
-        {reviews.map((item) => (
-          <ReviewCard key={item.id} item={item} />
-        ))}
+      <div className="relative mt-10 lg:mt-20">
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          slidesPerView={1.2}
+          centeredSlides={true}
+          loop={true}
+          spaceBetween={300}
+          onSwiper={(swiper: SwiperType) => setSwiperRef(swiper)}
+          className="swiper_container"
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 50,
+            depth: 150,
+            modifier: 1.5,
+            slideShadows: false,
+          }}
+          pagination={{ el: ".swiper-pagination", clickable: true }}
+          modules={[EffectCoverflow, Pagination, Navigation]}
+        >
+          {reviews.map((item) => (
+            <SwiperSlide
+              key={item.id}
+              className="transition-opacity duration-300"
+            >
+              {({ isActive }) => (
+                <div
+                  className={`${
+                    isActive ? "opacity-100" : "opacity-50 scale-90"
+                  }`}
+                >
+                  <ReviewCard item={item} />
+                </div>
+              )}
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
       <div className="flex justify-center items-center gap-6 lg:mt-10">
         <button
-          onClick={handlePrevPage}
-          disabled={currentPage === 1}
+          onClick={handlePrev}
           className="p-2 bg-pry9 flex text-white rounded-full disabled:bg-grey7 font-bold"
         >
           <TbChevronLeft size={24} />
         </button>
         <button
-          onClick={handleNextPage}
-          disabled={currentPage === totalPages}
+          onClick={handleNext}
           className="p-2 bg-pry9  text-white rounded-full disabled:bg-grey7 font-bold"
         >
           <TbChevronRight size={24} />

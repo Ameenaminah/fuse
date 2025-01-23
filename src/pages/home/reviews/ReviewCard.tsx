@@ -7,10 +7,14 @@ interface Props {
 }
 
 export const ReviewCard: FC<Props> = ({ item }) => (
-  <div className="flex flex-col gap-4 bg-pry2 rounded-2xl border border-pry9 px-6 py-10 font-dmSans w-full lg:w-[834px] lg:min-w-[834px]">
-    <div className="flex items-center gap-2">
-      <img src={CommentIcon} alt="" className="hidden md:flex" />
-      <p className="text-textParagraph text-base">{item.feedback}</p>
+  <div className="flex flex-col gap-4 bg-pry2 rounded-2xl border border-pry9 px-6 py-10 font-dmSans w-full  m-auto">
+    <div className="flex  gap-2 ">
+      <div className="hidden md:flex">
+        <img src={CommentIcon} alt="" className="w-full h-full " />
+      </div>
+      <p className="text-textParagraph text-base text-center">
+        {item.feedback}
+      </p>
     </div>
     <div className="flex flex-col justify-center items-center gap-0">
       <p className="text-grey12 text-lg font-semibold">{item.name}</p>
