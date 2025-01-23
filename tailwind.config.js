@@ -6,6 +6,7 @@ export default {
       colors: {
         grey1: " #F3F3F6",
         grey2: " #F9F9FB",
+        grey3: " #EFF0F3",
         grey6: " #D8D9E0",
         grey7: " #CDCED7",
         grey10: " #80828D",

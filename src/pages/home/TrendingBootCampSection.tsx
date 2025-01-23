@@ -2,6 +2,7 @@ import { FC } from "react";
 import { BootCampsSection, Button } from "../../components";
 import { bootCamps } from "../../data";
 import { TbArrowRight } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 export const TrendingBootCampSection: FC = () => {
   const trendingBootCamps = bootCamps.filter((bootCamp) => bootCamp.isTrending);
@@ -13,13 +14,13 @@ export const TrendingBootCampSection: FC = () => {
           title="Trending Bootcamps"
           items={trendingBootCamps}
         />
-        <div className="flex justify-center mt-20">
+        <Link to='bootcamps' className="flex justify-center mt-20">
           <Button
             buttonName="View All Bootcamps"
             icon={<TbArrowRight size={24} />}
             onPress={() => {}}
           />
-        </div>
+        </Link>
       </div>
     </section>
   );

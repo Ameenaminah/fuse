@@ -9,10 +9,10 @@ interface Props {
 
 export const Button: FC<Props> = ({ buttonName, onPress, icon }) => {
   return (
-    <div className="flex items-center flex-col lg:flex-row">
+    <div className="flex  flex-col lg:flex-row">
       <button
         onClick={onPress}
-        className={`flex items-center gap-2 bg-pry9 text-white text-base font-semibold py-2 px-4 ${StyleConstants.hoverFade}`}
+        className={`flex items-center justify-center gap-2 bg-pry9 text-white text-base font-semibold py-2 px-4 ${StyleConstants.hoverFade}`}
       >
         {buttonName}
         {icon && icon}

@@ -3,12 +3,16 @@ import { faqs } from "../../../data";
 import { FaqComponent } from "./FaqComponent";
 
 export const FaqsSection: FC = () => (
-  <section className="bg-white">
-    <div className="py-8 md:py-16 xl:py-20 px-5 md:px-16 lg:px-16 ">
-      <div className="container">
-        <p className="text-[2.5rem] font-Cinzel font-bold text-primary50 pb-20">
-          FREQUENTLY ASKED QUESTION
-        </p>
+  <section className={`bg-pry1 relative font-dmSans`}>
+    <div className="px-6 md:px-16 lg:px-24 2xl:px-0 font-dmSans container">
+      <div className="flex flex-col justify-between gap-20 py-10 lg:py-20 font-dmSans">
+        <div className="flex flex-col gap-2">
+          <p className="text-3xl font-semibold text-grey12 text-center">FAQs</p>
+          <p className="text-base font-normal text-grey11 text-center">
+            You’ve got questions for us? Find answers to common queries about
+            our bootcamps, enrollment, instructors, and more.
+          </p>
+        </div>
         <div className="flex flex-col gap-10">
           {faqs.map((item, index) => (
             <FaqComponent

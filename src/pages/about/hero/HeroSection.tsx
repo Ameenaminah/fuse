@@ -1,35 +1,34 @@
 import { FC } from "react";
-import { AboutHeroImage, BoxAshImage } from "../../../assets/images";
-import { HeroContent } from "./HeroContent";
 
 export const HeroSection: FC = () => {
   return (
-    <section className={`bg-primary00 `}>
-      <HeroContent
-        title="  What is FUSE Varsity ?"
-        body1=" FUSE Varsity is an across-the-board varsity for individuals
+    <section className={`bg-pry1 relative font-dmSans`}>
+      <div className=" px-6 md:px-16 lg:px-24 2xl:px-0 font-dmSans container">
+        <div className="flex justify-between gap-10 py-10 lg:py-20 font-dmSans">
+          <div className="flex flex-col gap-10 lg:w-1/2">
+            <p className="text-2xl md:text-3xl lg:text-5xl font-bold text-pry9">
+              What is{" "}
+              <span className="lg:block text-2xl md:text-3xl lg:text-5xl font-bold text-pry9">
+                FUSE Varsity?
+              </span>
+            </p>
+            <div className="flex flex-col gap-6">
+              <p className="text-lg font-normal text-grey11 text-justify">
+                FUSE Varsity is an across-the-board varsity for individuals
                 seeking to equip themselves with the essential skills and
                 knowledge needed to thrive in the ever-evolving landscape of the
-                future of work."
-        body2="Whether you’re seeking to acquire tech skills, upskill or
+                future of work.
+              </p>
+              <p className="text-lg font-normal text-grey11 text-justify">
+                Whether you’re seeking to acquire tech skills, upskill or
                 transition into a different career path, FUSE Varsity offers a
                 comprehensive curriculum cutting across various domains just for
-                you."
-      />
-      <div className="flex justify-end w-[150px] h-[150px] mr-auto">
-        <img src={BoxAshImage} alt="" className="transform rotate-90"/>
+                you.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <img src={AboutHeroImage} alt="" className="object-cover" />
-      </div>
-
-      <HeroContent
-        title="Our Mission and vision"
-        body1="Our mission and vision is to foster inclusive opportunities for all individuals by connecting them with the knowledge and skills necessary to thrive in an ever-evolving global landscape. "
-        body2="We aim to be a catalyst for transformation growth and equitable advancement in Africa and beyond, empowering individuals from all backgrounds to realize their full potential and contribute meaningfully to a dynamic global economy through skills education."
-        containerClassName="bg-white"
-        textClassName="text-primary50"
-      />
     </section>
   );
 };

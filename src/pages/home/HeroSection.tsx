@@ -5,7 +5,7 @@ import { HeroImage } from "../../assets/images";
 export const HeroSection: FC = () => {
   return (
     <section className={`bg-pry1 relative font-dmSans border-b border-grey6`}>
-      <div className=" px-6 md:px-16 lg:px-24 2xl:px-0 font-dmSans container">
+      <div className="px-6 md:px-16 lg:px-24 2xl:px-0 font-dmSans container">
         <div className="flex justify-between gap-10 py-10 lg:py-20 font-dmSans">
           <div className="flex flex-col gap-10 lg:w-[60%]">
             <div className="flex flex-col gap-6">
