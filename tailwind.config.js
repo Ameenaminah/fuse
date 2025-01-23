@@ -12,6 +12,7 @@ export default {
         grey11: " #62636C",
         grey12: " #1E1F24",
         pry1: " #FAFBFC",
+        pry2: " #F3F9FF",
         pry4: " #D9EBFF",
         pry9: " #002994",
         pry11: " #2665F4",

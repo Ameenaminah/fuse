@@ -6,7 +6,7 @@ interface Props {
 }
 
 export const ScholarBenefitItem: FC<Props> = ({ item }) => (
-  <div className="flex flex-col gap-6 font-dmSans p-10">
+  <div className="flex flex-col gap-6 font-dmSans p-0 lg:p-10">
     <div className="flex flex-col gap-6">
       <div className="flex items-center justify-center w-[44px] h-[44px] rounded-full bg-white">
         <img src={item.icon} alt={item.title} />

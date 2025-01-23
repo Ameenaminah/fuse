@@ -11,3 +11,4 @@ export { default as ArrowRightIcon } from "./arrow-right.svg";
 export { default as TwitterIcon } from "./twitter.svg";
 export { default as InstagramIcon } from "./instagram.svg";
 export { default as LinkedInIcon } from "./linkedIn.svg";
+export { default as CommentIcon } from "./comment.svg";

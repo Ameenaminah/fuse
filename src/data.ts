@@ -6,41 +6,13 @@ import {
   LearningIcon,
   SupportIcon,
 } from "./assets/icons";
-import {
-  Avatar1Image,
-  Avatar2Image,
-  Avatar3Image,
-  Card1Image,
-} from "./assets/images";
-import { BlogResponse } from "./models/blog";
-
-export interface Link {
-  id: number;
-  link: string;
-  to: string;
-}
-
-export interface BootCamp {
-  id: string;
-  image: string;
-  title: string;
-  content: string;
-  period: number;
-  price: number;
-  isTrending?: boolean;
-}
+import { Card1Image } from "./assets/images";
+import { BlogResponse, ReviewResponse, Link, BootCampResponse } from "./models";
 
 export interface ScholarBenefit {
   title: string;
   description: string;
   icon: string;
-}
-
-interface Review {
-  name: string;
-  role: string;
-  feedback: string;
-  image: string;
 }
 
 interface Faq {
@@ -71,7 +43,7 @@ export const links: Link[] = [
   },
 ];
 
-export const bootCamps: BootCamp[] = [
+export const bootCamps: BootCampResponse[] = [
   {
     id: "1",
     image: Card1Image,
@@ -179,27 +151,27 @@ export const scholarBenefits: ScholarBenefit[] = [
   },
 ];
 
-export const reviews: Review[] = [
+export const reviews: ReviewResponse[] = [
   {
+    id: "1",
     name: "Awwal",
     role: "Student",
     feedback:
       "I have found the teachings and previous works helpful at almost every time I needed it. I am proud of everything I learnt from my tutor, from the consistency to the need to always improve. Thank you very much for your mentorship.",
-    image: Avatar1Image,
   },
   {
+    id: "2",
     name: "Peter",
     role: "Student",
     feedback:
       "My experience with the mentorship program was life changing and I will definitely be recommending the program to my friends",
-    image: Avatar2Image,
   },
   {
+    id: "3",
     name: "Pelumi",
     role: "Student",
     feedback:
       "The most valuable experience I had during the program was gaining a comprehensive understanding of Product Management. The Facilitator’s guidance helped me effectively balance user needs with business objectives, prioritize features, and make data-driven decisions.",
-    image: Avatar3Image,
   },
 ];
 

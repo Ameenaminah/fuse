@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { TbClock, TbMapPin } from "react-icons/tb";
-import { BootCamp } from "../../data";
 import { formatCurrencyWithCommas } from "../../helpers";
+import { BootCampResponse } from "../../models";
 
 interface Props {
-  item: BootCamp;
+  item: BootCampResponse;
 }
 
 export const BootCampItemCard: FC<Props> = ({ item }) => {

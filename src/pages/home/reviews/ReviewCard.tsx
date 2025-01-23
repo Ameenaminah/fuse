@@ -1,23 +1,20 @@
 import { FC } from "react";
+import { CommentIcon } from "../../../assets/icons";
+import { ReviewResponse } from "../../../models/review";
 
 interface Props {
-  name: string;
-  role: string;
-  feedback: string;
-  image: string;
+  item: ReviewResponse;
 }
 
-export const ReviewCard: FC<Props> = ({ name, role, feedback, image }) => (
-  <div className="flex flex-col gap-4">
-    <div className="flex items-center gap-7">
-      <div className="w-[116px] h-[116px] rounded-full">
-        <img src={image} alt={`${name}'s picture`} className="w-full" />
-      </div>
-      <div className="flex flex-col gap-5">
-        <h1 className="text-textHeading text-xl font-bold">{name}</h1>
-        <p className="text-textParagraphLight text-sm">{role}</p>
-      </div>
+export const ReviewCard: FC<Props> = ({ item }) => (
+  <div className="flex flex-col gap-4 bg-pry2 rounded-2xl border border-pry9 px-6 py-10 font-dmSans w-full lg:w-[834px] lg:min-w-[834px]">
+    <div className="flex items-center gap-2">
+      <img src={CommentIcon} alt="" className="hidden md:flex" />
+      <p className="text-textParagraph text-base">{item.feedback}</p>
     </div>
-    <p className="text-textParagraph text-base">{feedback}</p>
+    <div className="flex flex-col justify-center items-center gap-0">
+      <p className="text-grey12 text-lg font-semibold">{item.name}</p>
+      <p className="text-grey11 text-base font-normal">{item.role}</p>
+    </div>
   </div>
 );

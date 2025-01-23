@@ -10,7 +10,7 @@ export const ScholarBenefitsSection: FC = () => {
           <p className="text-3xl font-semibold text-grey12 text-center">
             Why Become A FUSE Scholar?
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 bg-pry9 p-10 rounded-3xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 bg-pry9 p-4 lg:p-10 rounded-3xl">
             {scholarBenefits.map((benefit, index) => (
               <ScholarBenefitItem key={index} item={benefit} />
             ))}

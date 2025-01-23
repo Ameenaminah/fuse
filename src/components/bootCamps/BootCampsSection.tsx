@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { BootCampItemCard } from "./BootCampItemCard";
-import { BootCamp } from "../../data";
+import { BootCampResponse } from "../../models";
 
 interface Props {
   title: string;
-  items: BootCamp[];
+  items: BootCampResponse[];
 }
 
 export const BootCampsSection: FC<Props> = ({ items, title }) => (
