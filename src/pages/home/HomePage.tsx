@@ -1,14 +1,14 @@
 import { FC } from "react";
 import { HeroSection } from "./HeroSection";
-import { BootCampsSection } from "./bootCamps/BootCampsSection";
 import { ReviewsSection } from "./reviews/ReviewsSection";
 import { ScholarBenefitsSection } from "../../components";
+import { TrendingBootCampSection } from "./TrendingBootCampSection";
 
 export const HomePage: FC = () => {
   return (
     <>
       <HeroSection />
-      <BootCampsSection />
+      <TrendingBootCampSection />
       <ScholarBenefitsSection />
       <ReviewsSection />
     </>

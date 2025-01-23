@@ -1,25 +1,20 @@
 import { FC } from "react";
-import { LineComponent } from "../LineComponent";
+import { ScholarBenefit } from "../../data";
 
 interface Props {
-  title: string;
-  description: string;
-  icon: string;
+  item: ScholarBenefit;
 }
 
-export const ScholarBenefitItem: FC<Props> = ({ title, description, icon }) => (
-  <div className="flex flex-col gap-6">
-    <div className="flex items-center gap-6">
-      <div className="flex items-center justify-center w-[44px] h-[44px] rounded-full bg-iconBg">
-        <img src={icon} alt={title} />
+export const ScholarBenefitItem: FC<Props> = ({ item }) => (
+  <div className="flex flex-col gap-6 font-dmSans p-10">
+    <div className="flex flex-col gap-6">
+      <div className="flex items-center justify-center w-[44px] h-[44px] rounded-full bg-white">
+        <img src={item.icon} alt={item.title} />
       </div>
       <div>
-        <p className="text-lg lg:text-2xl text-textHeading font-bold">
-          {title}
-        </p>
-        <LineComponent />
+        <p className="text-xl text-grey1 font-semibold">{item.title}</p>
+        <p className="text-base text-grey2 font-normal">{item.description}</p>
       </div>
     </div>
-    <p className="text-base text-textParagraph">{description}</p>
   </div>
 );

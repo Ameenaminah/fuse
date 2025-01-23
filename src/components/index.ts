@@ -6,3 +6,4 @@ export { Footer } from "./Footer";
 export { NotFound } from "./NotFound";
 export { IconButton } from "./IconButton";
 export { ScholarBenefitsSection } from "./scholarBenefits/ScholarBenefitsSection";
+export { BootCampsSection } from "./bootCamps/BootCampsSection";

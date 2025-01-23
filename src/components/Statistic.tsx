@@ -6,8 +6,8 @@ interface Props {
 }
 
 export const Statistic: FC<Props> = ({ number, label }) => (
-  <div className="statistic">
-    <p className="text-4xl font-bold">{number}</p>
-    <p className="text-sm">{label}</p>
+  <div className="flex flex-col gap-2 font-dmSans text-pry9">
+    <p className="text-3xl font-semibold text-pry9">{number}</p>
+    <p className="text-base font-normal text-pry9">{label}</p>
   </div>
 );

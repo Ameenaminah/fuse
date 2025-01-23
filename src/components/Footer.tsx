@@ -1,34 +1,49 @@
 import { FC } from "react";
-import { BoxBlueImage } from "../assets/images";
+import { Logo } from "./Logo";
+import { WhiteLogoIcon } from "../assets/icons";
+import { links } from "../data";
+import { NavLink } from "react-router-dom";
+import { ContactInfo } from "./ContactInfo";
+import { StyleConstants } from "../constants";
 
 export const Footer: FC = () => {
   return (
-    <footer className="bg-white relative">
-      <div className="pt-8 md:pt-16 xl:pt-20 px-5 md:px-16 lg:px-16">
-        <div className="flex flex-col lg:flex-row justify-between container">
-          <div className="flex flex-col justify-center px-10 lg:px-20 py-20 gap-5 bg-primary55 lg:h-[372px] lg:w-[45%]">
-            <p className="text-5xl text-primary00 font-Cinzel font-bold">
-              We Would Love To Hear From You
-            </p>
-            <p className="text-lg text-primary20">
-              Get in touch with us at FUSE Varsity!
-            </p>
+    <footer
+      className={`bg-pry9 relative font-dmSans text-white`}
+    >
+      <div className="px-6 md:px-16 lg:px-24 2xl:px-0 font-dmSans container py-10 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div className="flex flex-col gap-7">
+            <Logo textColor="text-white" iconName={WhiteLogoIcon} />
+            <div className="flex flex-col gap-2">
+              <p className="text-base font-normal">
+                Subscribe to Our Newsletter
+              </p>
+              <div className="flex gap-4">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="p-2 rounded border border-white bg-transparent focus:outline-none"
+                />
+                <button
+                  className={`bg-white text-pry9 px-4 py-2 rounded-sm ${StyleConstants.hoverFade}`}
+                >
+                  Subscribe
+                </button>
+              </div>
+            </div>
           </div>
-
-          <div className="flex flex-col justify-center px-10 lg:px-20 py-20 gap-5 lg:w-[45%]">
-            <p className="text-lg text-primary20">
-              Whether you have a question, need support, want to partner with us
-              or just want to say hello, we're here and ready to hear from you.
-              Reach out to us through the form below or via email at xxxxxxxx.
-            </p>
-            <p className="text-lg text-primary20">
-              We look forward to hearing from you!
-            </p>
+          <div className="flex flex-col gap-6">
+            {links
+              .filter(({ link }) => link !== "Home")
+              .map(({ id, link, to }) => (
+                <NavLink key={id} to={to}>
+                  {link}
+                </NavLink>
+              ))}
           </div>
+          <ContactInfo />
         </div>
-      </div>
-      <div className="hidden absolute bottom-0 right-0 lg:flex justify-end w-[150px] h-[150px] ml-auto">
-        <img src={BoxBlueImage} alt="" />
       </div>
     </footer>
   );

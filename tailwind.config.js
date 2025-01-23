@@ -4,6 +4,17 @@ export default {
   theme: {
     extend: {
       colors: {
+        grey1: " #F3F3F6",
+        grey2: " #F9F9FB",
+        grey6: " #D8D9E0",
+        grey7: " #CDCED7",
+        grey10: " #80828D",
+        grey11: " #62636C",
+        grey12: " #1E1F24",
+        pry1: " #FAFBFC",
+        pry4: " #D9EBFF",
+        pry9: " #002994",
+        pry11: " #2665F4",
         primary00: " #002994",
         primary20: "#001B63",
         primary50: " #00081E",
@@ -17,9 +28,16 @@ export default {
         stroke: "#E5E3D5",
       },
       fontFamily: {
-        Cinzel: "Cinzel",
-        WorkSans: "Work Sans",
-        Chivo: "Chivo",
+        workSans: ["Work Sans", "sans-serif"],
+        cinzel: ["Cinzel", "serif"],
+        chivo: ["Chivo", "sans-serif"],
+        dmSans: ["DM Sans", "sans-serif"],
+      },
+      boxShadow: {
+        "custom-1":
+          "var(--sds-size-depth-0) var(--sds-size-depth-025) var(--sds-size-depth-100) var(--sds-size-depth-0) var(--sds-color-black-100)",
+        "custom-2":
+          "var(--sds-size-depth-0) var(--sds-size-depth-025) var(--sds-size-depth-100) var(--sds-size-depth-0) var(--sds-color-black-200)",
       },
     },
   },

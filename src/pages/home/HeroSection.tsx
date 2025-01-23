@@ -1,37 +1,41 @@
 import { FC } from "react";
 import { Button, Statistic } from "../../components";
-import { BoxAshImage, HeroImage } from "../../assets/images";
+import { HeroImage } from "../../assets/images";
 
 export const HeroSection: FC = () => {
   return (
-    <section className={`bg-primary00 relative`}>
-      <div className="pt-8 md:pt-16 xl:pt-20 px-5 md:px-16 lg:px-16">
-        <div className="container">
-          <p className="lg:w-[942px] text-4xl lg:text-6xl font-Chivo font-bold mb-10">
-            Get Ahead In The Future of Work With The Right Skills
-          </p>
-          <div className="w-full flex flex-col lg:flex-row-reverse gap-10">
-            <div className="flex flex-col w-full lg:w-1/2 gap-10">
-              <p className="w-full text-justify lg:w-[487px] text-lg font-WorkSans">
-                At FUSE Varsity, we've revolutionized skills education. Our
+    <section className={`bg-pry1 relative font-dmSans border-b border-grey6`}>
+      <div className=" px-6 md:px-16 lg:px-24 2xl:px-0 font-dmSans container">
+        <div className="flex justify-between gap-10 py-10 lg:py-20 font-dmSans">
+          <div className="flex flex-col gap-10 lg:w-[60%]">
+            <div className="flex flex-col gap-6">
+              <p className="text-3xl lg:text-5xl text-justify font-bold text-grey12">
+                <span className="text-pry9 text-3xl lg:text-5xl font-bold">
+                  Get Ahead
+                </span>{" "}
+                In The Future of Work With The Right Skills
+              </p>
+              <p className="text-lg font-normal text-grey11 text-justify">
+                At FUSE Varsity, we're revolutionizing skills education. Our
                 comprehensive support system aims to assist you in cultivating
                 the skills and confidence necessary to navigate and excel in
                 your chosen career paths.
               </p>
-              <Button buttonName="Get Started" />
-              <div className="flex items-center gap-10">
-                <Statistic label="Career Courses" number="10+" />
-                <Statistic label="Our Students" number="100+" />
-              </div>
             </div>
-            <div className="lg:w-1/2">
-              <img src={HeroImage} alt="" />
+            <Button buttonName="Get Started" onPress={() => {}} />
+            <div className="flex items-center gap-8">
+              <Statistic label="Career Courses" number="10+" />
+              <Statistic label="Our Students" number="100+" />
             </div>
           </div>
+          <div className="hidden lg:flex  lg:w-[400px] lg:h-[400px] rounded-full w-full bg-[#D9EBFF]">
+            <img
+              src={HeroImage}
+              alt=""
+              className="rounded-full w-full h-full object-cover"
+            />
+          </div>
         </div>
-      </div>
-      <div className="hidden absolute bottom-0 right-0 lg:flex justify-end w-[150px] h-[150px] ml-auto">
-        <img src={BoxAshImage} alt="" />
       </div>
     </section>
   );
