@@ -8,7 +8,7 @@ export const HeroSection: FC = () => {
       className={`bg-pry1 relative font-dmSans md:border-b md:border-grey6`}
     >
       <div className="px-4 md:px-16 lg:px-24 2xl:px-0 font-dmSans container">
-        <div className="flex justify-between gap-10 py-4 md:py-10 lg:py-20 font-dmSans">
+        <div className="flex flex-col lg:flex-row justify-between gap-10 py-4 md:py-10 lg:py-20 font-dmSans">
           <div className="flex flex-col gap-5 lg:gap-10 lg:w-[60%]">
             <div className="flex flex-col gap-3 md:gap-6">
               <p className="text-3xl lg:text-5xl md:text-justify font-bold text-grey12">
@@ -30,7 +30,7 @@ export const HeroSection: FC = () => {
               <Statistic label="Our Students" number="100+" />
             </div>
           </div>
-          <div className="hidden lg:flex  lg:w-[400px] lg:h-[400px] rounded-full w-full bg-[#D9EBFF]">
+          <div className="w-full lg:w-[400px] lg:h-[400px] rounded-full bg-[#D9EBFF]">
             <img
               src={HeroImage}
               alt=""

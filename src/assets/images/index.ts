@@ -9,4 +9,6 @@ export { default as AboutHeroImage } from "./about-hero.png";
 export { default as BoxAshImage } from "./box-ash.png";
 export { default as BoxBlueImage } from "./box-blue.png";
 export { default as NotFoundImage } from "./404.svg";
+export { default as EyeImage } from "./eye.svg";
+export { default as ArrowImage } from "./arrow.svg";
 
