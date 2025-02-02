@@ -22,9 +22,11 @@ export const ReviewsSection: FC = () => {
   }, [swiperRef]);
 
   return (
-    <section className={`bg-pry1 relative font-dmSan py-10 lg:py-20`}>
-      <div className="flex flex-col gap-2 font-dmSans text-center px-6 md:px-16">
-        <p className="text-3xl font-semibold text-grey12 ">Success Stories</p>
+    <section className={`bg-pry1 relative font-dmSan py-4 md:py-10 lg:py-20`}>
+      <div className="flex flex-col gap-2 font-dmSans text-center px-4 md:px-16">
+        <p className="text-xl md:text-3xl font-semibold text-grey12 ">
+          Success Stories
+        </p>
         <p className="text-base font-normal text-grey11">
           Read what our past students are saying about their FUSE experience
         </p>

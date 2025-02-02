@@ -30,10 +30,10 @@ export const BlogPage: FC = () => {
   return (
     <>
       <section className={`bg-pry1 relative font-dmSans border-b border-grey6`}>
-        <div className="px-6 md:px-16 lg:px-24 2xl:px-0 font-dmSans container py-10 lg:py-20">
-          <div className="flex flex-col gap-20">
+        <div className="px-4 md:px-16 lg:px-24 2xl:px-0 font-dmSans container py-4 md:py-10 lg:py-20">
+          <div className="flex flex-col gap-5 md:gap-10">
             <div className="flex flex-col gap-10 lg:w-[835px]">
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-4">
                 <p className="text-3xl lg:text-4xl text-justify font-semibold text-grey12">
                   Blog
                 </p>

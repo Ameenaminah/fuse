@@ -8,10 +8,8 @@ import { StyleConstants } from "../constants";
 
 export const Footer: FC = () => {
   return (
-    <footer
-      className={`bg-pry9 relative font-dmSans text-white`}
-    >
-      <div className="px-6 md:px-16 lg:px-24 2xl:px-0 font-dmSans container py-10 lg:py-20">
+    <footer className={`bg-pry9 relative font-dmSans text-white`}>
+      <div className="px-4 md:px-16 lg:px-24 2xl:px-0 font-dmSans container py-4 md:py-10 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div className="flex flex-col gap-7">
             <Logo textColor="text-white" iconName={WhiteLogoIcon} />
@@ -19,7 +17,7 @@ export const Footer: FC = () => {
               <p className="text-base font-normal">
                 Subscribe to Our Newsletter
               </p>
-              <div className="flex gap-4">
+              <div className="flex gap-4 w-full">
                 <input
                   type="email"
                   placeholder="Enter your email"
@@ -33,11 +31,11 @@ export const Footer: FC = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 text-base">
             {links
               .filter(({ link }) => link !== "Home")
               .map(({ id, link, to }) => (
-                <NavLink key={id} to={to}>
+                <NavLink key={id} to={to} className='text-base text-white font-normal'>
                   {link}
                 </NavLink>
               ))}

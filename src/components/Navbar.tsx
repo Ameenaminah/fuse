@@ -28,8 +28,8 @@ export const Navbar: FC = () => {
   );
 
   return (
-    <header className={`bg-pry1 sticky z-20 top-0 border-b-2 border-grey6 `}>
-      <div className="py-4 px-6 md:px-16 lg:px-24 2xl:px-0 font-dmSans container">
+    <header className={`bg-pry1 sticky z-20 top-0 border-b border-grey6 `}>
+      <div className="py-4 px-4 md:px-16 lg:px-24 2xl:px-0 font-dmSans container">
         <div className="flex items-center justify-between">
           <Logo />
           {/* Desktop Navigation */}

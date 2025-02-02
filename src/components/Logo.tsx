@@ -13,9 +13,14 @@ export const Logo: FC<Props> = ({
   iconName = BlueLogoIcon,
 }) => {
   return (
-    <Link to="/" className={`flex items-center gap-2 ${StyleConstants.hoverFade}`}>
-      <img src={iconName} alt="logo" />
-      <p className={`text-xl lg:text-2xl font-cinzel font-bold ${textColor}`}>
+    <Link
+      to="/"
+      className={`flex items-center gap-2 ${StyleConstants.hoverFade}`}
+    >
+      <img src={iconName} alt="logo" className="w-6 md:w-8 " />
+      <p
+        className={`text-sm md:text-xl lg:text-2xl font-cinzel font-bold ${textColor}`}
+      >
         FUSE VARSITY
       </p>
     </Link>
